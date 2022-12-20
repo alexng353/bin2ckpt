@@ -1,14 +1,49 @@
 # bin2ckpt
 
-Convert Huggingface Pytorch checkpoint to Tensorflow checkpoint
+## alexng353's modifications
+
+- Added support for converting a PyTorch binary model to a TensorFlow checkpoint
+- Added support for converting CKPT to safetensors
+
+### Environment
+
+```bash
+python -m venv .
+
+# linux
+source bin/activate
+
+# windows
+.\Scripts\activate
+
+## Install
+
+pip install -r requirements.txt
+
+
+```
+
+### Usage
+
+#### Convert PyTorch binary model to TensorFlow checkpoint
+
+```bash
+python .\bin2ckpt.py --model_path="PATH TO MODEL REPO" --checkpoint_path="PATH TO OUTPUT FILE"
+```
+
+#### Convert TensorFlow checkpoint to safetensors
+
+I was lazy so you have to edit the path in the script file lmao
+
+```bash
+python ckpt2safetensors.py
+```
+
+## Original README
 
 详细说明可以参见[《将 PyTorch 版 bin 模型转换成 Tensorflow 版 ckpt》](https://xiaosheng.run/2021/04/12/pytorch-model-to-tensorflow-ckpt.html)
 
-## Environment
 
-- torch
-- tensorflow
-- transformers
 
 ## Usage
 
